@@ -1,0 +1,158 @@
+@font-face {
+    font-family: SFPro;
+    src: url("/fonts/SFPro/SFPro-Regular.ttf") format("truetype");
+}
+
+.ws-body {
+    position: relative;
+    top: 100px;
+}
+
+
+/* Span Burger */
+
+@media only screen and (min-width: 720px) {
+    #h-bg {
+        visibility: hidden;
+    }
+}
+
+.h-item {
+    position: relative;
+    display: inline;
+    top: 20px;
+    margin-left: 10px;
+}
+
+.hb-items {
+    position: relative;
+    text-align: center;
+}
+
+#dot {
+    font-size: 5px;
+    position: relative;
+    top: -2.5px;
+}
+
+#menuToggle {
+    display: block;
+    position: absolute;
+    top: 36px;
+    right: 50px;
+    z-index: 3;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 28px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+    background: #b5dfff;
+}
+
+#menuToggle span {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #b5dfff;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle span:nth-last-child(3) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 1;
+    transform: translateX(4px) translateY(-7px) rotate(45deg);
+    background: #4570a1;
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    opacity: 0;
+    background: #2d3436;
+}
+
+#menuToggle input:checked~span:nth-last-child(1) {
+    opacity: 1;
+    transform: translateX(3px) translateY(0px) rotate(-45deg);
+    background: #4570a1;
+}
+
+
+/* Menu display*/
+
+#menuItems {
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    top: -12px;
+    right: 0px;
+    font-size: 20px;
+    height: 500px;
+    width: 310px;
+    border-radius: 0px 0px 0px 15px;
+    background: rgb(99, 110, 114, 0.5);
+}
+
+#menuItems a {
+    position: relative;
+    z-index: 1;
+    top: 100px;
+    right: -30px;
+    text-decoration: none;
+    font-family: "SFPro", sans-serif;
+    font-weight: 600;
+    color: #232323;
+    transition: color 0.58s ease;
+}
+
+#menuItems a:hover {
+    color: #E7DFC6;
+}
+
+@keyframes menuShow {
+    from {
+        right: -100px;
+        opacity: 0;
+    }
+    to {
+        right: 0px;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes menuHide {
+    from {
+        visibility: visible;
+        opacity: 1
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

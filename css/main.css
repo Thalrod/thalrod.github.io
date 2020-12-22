@@ -1,0 +1,154 @@
+@font-face {
+    font-family: SFPro;
+    src: url("/fonts/SFPro/SFPro-Regular.ttf") format("truetype");
+}
+
+body {
+    font-family: "SFPro", sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(rgb(20, 30, 48), rgb(36, 59, 85));
+}
+
+.mobilemenu {
+    min-height: 75px;
+    max-height: 75px;
+}
+
+.mm-title a {
+    z-index: 1;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-family: "SFPro", sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    color: #b5dfff;
+    cursor: default;
+    animation: wave 4s infinite;
+    transition: color .3s ease-in;
+}
+
+.mm-title a:hover {
+    color: #686de0;
+}
+
+.separation {
+    background: #4570A1;
+    width: 100%;
+    height: 1px;
+}
+
+#wt-separation {
+    opacity: 1;
+    width: 15%;
+    margin-left: 42.5%;
+    height: 2px;
+    animation: separationAnim 2s;
+    animation-timing-function: cubic-bezier(0.2, 0.3, 0.25, 0.9);
+}
+
+#bt-separation {
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+.welcome-text {
+    min-height: 75px;
+    max-height: 75px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.social-text {
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    font-weight: 580;
+}
+
+.home-float {
+    color: white;
+    margin-top: 50px;
+    min-height: 100px;
+    max-height: 100px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.social {
+    position: relative;
+    display: inline;
+    top: 20px;
+    margin-left: 10px;
+}
+
+.social a {
+    text-decoration: none;
+    color: #b5dfff;
+    font-weight: 600;
+}
+
+.home-block {
+    margin-top: 50px;
+    background: #E7DFC6;
+    min-height: 300px;
+    max-height: 300px;
+    border: 2px solid #131B23;
+    border-radius: 50px;
+}
+
+@keyframes wave {
+    0% {
+        left: 20px;
+    }
+    50% {
+        left: 40px;
+    }
+    100% {
+        left: 20px;
+    }
+}
+
+@keyframes separationAnim {
+    0% {
+        width: 0%;
+        margin-left: 50%;
+        opacity: 0;
+        display: none;
+    }
+    10% {
+        width: 0%;
+        margin-left: 50%;
+        opacity: 0;
+        display: block;
+    }
+    100% {
+        width: 15%;
+        margin-left: 42.5%;
+        opacity: 1;
+        display: block;
+    }
+}
+
+@keyframes shade {
+    from {
+        opacity: 0;
+        bottom: -15px;
+    }
+    to {
+        opacity: 1;
+        bottom: 0px;
+    }
+}
+
+ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
